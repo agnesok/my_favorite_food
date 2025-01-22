@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Agnes Favourite Food
+  </title>
+</head>
+
+<body style="background-color: rgb(255, 0, 221); width: 100%; text-align: center; padding: 20px;">
+  <h1 style="color: rgb(51, 255, 0);"> Agnes Favourite Foods</h1>
+  <p>Here are some of my favourite dishes and why i love them</p>
+  <h1 style="color: rgb(0, 26, 255);"> Favourite foods:</h1>
+
+  <ul style="display: inline-block; padding: 0px;">
+    <li> Pasta </li>
+    <li style="color: rgb(0, 247, 255);"> Ice cream</li>
+    <li style="color: rgb(243, 235, 235); "> Noodles</li>
+    <li style="color:rgb(208, 255, 0); font-size: large;"> Pizza </li>
+  </ul>
+  <h1 style="color: rgb(0, 255, 179); font-size:30px;"> Dish Images</h1>
+  <div style="display: flex ; justify-content: space-around;">
+    <div>
+      <img src="images/with-bolognese-pasta-vector-48556565.jpg" height="100px" width="100px">
+      <p>Pasta</p>
+    </div>
+    <div>
+      <img src="images/Ice cream.jpg" height="100px" weight="100px">
+      <p> Ice cream</p>
+    </div>
+    <div>
+      <img src="images/Noodles.jpg" height="100px" weight="100px">
+      <p> Noodles</p>
+    </div>
+    <div>
+      <img src="images/pizza.jpg" height=" 100px" weight="100px">
+      <p> Pizza</p>
+    </div>
+  </div>
+  <table style="margin: 20px auto; width: 80%; background-color: white;" border="1" cellpadding="5" cellspacing="0">
+    <tr>
+      <th>Dishes</th>
+      <th> Cuisine</th>
+      <th> Why i like it</th>
+    </tr>
+    <tr>
+      <td> Pasta</td>
+      <td> Italian</td>
+      <td> Its versatile</td>
+    </tr>
+    <tr>
+      <td> Ice cream</td>
+      <td> Dessert</td>
+      <td> Its creamy</td>
+    </tr>
+    <tr>
+      <td> Noodles</td>
+      <td> Chinese </td>
+      <td> Its long</td>
+    </tr>
+    <tr>
+      <td> Pizza</td>
+      <td> Italian</td>
+      <td> Its cheesy</td>
+    </tr>
+  </table>
+  <h1 style="color: purple;"> Tell me about your favorite food</h1>
+  <form style="margin: 20px auto; width: 80%; text-align: left;" onsubmit="showFavoriteFoods(event)">
+    
+      <label for="name" style="display: block; margin-bottom: 5px;"> Your name:</label>
+      <input id="name" name="name" type="text" placeholder="Enter your name" style="display: block; width: 100%; padding: 5px; margin-bottom: 10px;">
+
+    <!-- <div> -->
+      <label for="food" style="display: block; margin-bottom: 5px;"> Your favourite food</label>
+      <input id="food" name="food" type="text" placeholder=" Enter your favourite food" style="display: block; width: 100%; padding: 5px; margin-bottom: 10px;">
+    <!-- </div> -->
+    <!-- <div> -->
+      <label for="description" style="display: block; margin-bottom: 5px;"> Why do u like it</label>
+      <textarea id="description" name="description" rows="5" style="display: block; border-radius: 10px; border-right: 10px;  width: 100%; padding: 5px; margin-bottom: 10px;"
+        placeholder="Write a short description"></textarea>
+    <!-- </div> -->
+    <button type="submit" style="background-color: blue; border-color: grey; color: white; border-radius: 10px; padding: 10px 20px;"> Submit</button>
+  </form>
+  <br>
+  <a href="https://www.chicken-republic.com" target="_blank" style="padding: 5px; color: white; background-color: blue; border-radius: 3px; text-decoration: none; padding: 5px;">Learn to cook here!</a>
+  <br>
+</body>
+
+<script>
+// JavaScript function to handle form submission
+// JavaScript function to handle form submission
+function showFavoriteFoods(event) {
+  event.preventDefault();
+  const name = document.getElementById("name").value;
+  const favoriteFood = document.getElementById("food").value;
+  const whyFavorite = document.getElementById("description").value;
+  let message = `Your Name: ${name}\nFavorite Food: ${favoriteFood}\nWhy You Like It: ${whyFavorite}`;
+  alert(message);
+}
+
+</script>
+
+</html>
